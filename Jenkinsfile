@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stages('First'){
+        stage('First'){
             environment { 
                     EXECUTE='True'
                 }
