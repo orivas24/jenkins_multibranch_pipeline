@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('First'){
             environment { 
-                    EXECUTE='True'
+                    EXECUTE = 'True'
                 }
             steps{
                 echo "Updating First Stage" 
@@ -11,7 +11,7 @@ pipeline{
         }    
         stage('Second'){
             when {
-                environment name: 'EXECUTE', value: 'TRUE'
+                environment name: 'EXECUTE', value: 'True'
             } 
             steps{
                 echo "Updating Second Stage"
@@ -19,7 +19,7 @@ pipeline{
         }
         stage('Third'){
              when {
-                environment name: 'EXECUTE', value: 'TRUE'
+                environment name: 'EXECUTE', value: 'True'
             } 
             steps{
                 echo "Updating Third Stage"
